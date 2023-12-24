@@ -1,5 +1,5 @@
 build/beaconing_nrf52832_xxAA_s132_7.2.0_Debug/obj/net_state.o: \
- D:\GIT\nrf5_mesh\mesh\core\src\net_state.c \
+ D:\GIT\nrf5sdkformeshv500src\mesh\core\src\net_state.c \
  ../../mesh/core/include/net_state.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.62/include/stdint.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.62/include/stdbool.h \

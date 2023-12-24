@@ -80,7 +80,7 @@
 /*****************************************************************************
  * Definitions
  *****************************************************************************/
-#define ONOFF_SERVER_0_LED          (BSP_LED_2)
+#define ONOFF_SERVER_0_LED          (BSP_LED_0)
 #define APP_ONOFF_ELEMENT_INDEX     (0)
 
 /* Controls if the model instance should force all mesh messages to be segmented messages. */

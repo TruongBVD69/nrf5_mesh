@@ -95,9 +95,12 @@
  * @note To fit the configuration and health models, this value must equal at least
  * the number of models needed by the application plus two.
  */
-#define ACCESS_MODEL_COUNT (1 + /* Configuration server */  \
-                            1 + /* Health server */  \
-                            2   /* Sensor server and setup server */ )
+#define ACCESS_MODEL_COUNT (/* Element 0:                                */  \
+                            1 + /* Configuration server                  */  \
+                            1 + /* Health server                         */  \
+                            2 +  /* Sensor server 1 and setup server     */  \
+                            /* Element 1:                                */  \
+                            2    /* Sensor server 2 and setup server     */  )
 
 
 /**
@@ -114,7 +117,7 @@
  * @note This value must equal @ref ACCESS_MODEL_COUNT minus the number of
  * models operating on shared states.
  */
-#define ACCESS_SUBSCRIPTION_LIST_COUNT (2)
+#define ACCESS_SUBSCRIPTION_LIST_COUNT (4)
 
 /**
  * @defgroup ACCESS_RELIABLE_CONFIG Configuration of access layer reliable transfer

@@ -65,7 +65,7 @@ typedef struct
 typedef struct
 {
     unpacked_marshalled_sensor_data_t mpid;
-    uint8_t * raw_value;
+    uint16_t * raw_value;
 } unpacked_sensor_data_t;
 
 

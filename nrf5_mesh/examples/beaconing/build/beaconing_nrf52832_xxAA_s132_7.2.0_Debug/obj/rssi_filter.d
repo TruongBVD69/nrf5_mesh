@@ -1,5 +1,5 @@
 build/beaconing_nrf52832_xxAA_s132_7.2.0_Debug/obj/rssi_filter.o: \
- D:\GIT\nrf5_mesh\mesh\bearer\src\rssi_filter.c \
+ D:\GIT\nrf5sdkformeshv500src\mesh\bearer\src\rssi_filter.c \
  ../../mesh/bearer/api/rssi_filter.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.62/include/stdint.h \
  ../../mesh/bearer/include/filter_engine.h \

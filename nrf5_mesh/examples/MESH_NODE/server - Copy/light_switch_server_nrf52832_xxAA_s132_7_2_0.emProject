@@ -49,7 +49,6 @@
       <file file_name="src/ds18b20.c" />
       <file file_name="include/ds18b20.h" />
       <file file_name="../../common/src/app_level.c" />
-      <file file_name="../../../models/model_spec/generic_level/src/generic_level_mc.c" />
     </folder>
     <folder Name="Core">
       <file file_name="../../../mesh/core/src/internal_event.c" />

@@ -177,7 +177,7 @@ APP_SENSOR_SERVER_DEF(m_sensor_server_0,
 
 
 
-static uint8_t m_pir_motion_sensed_in_period = 12.3;
+static uint8_t m_pir_motion_sensed_in_period;
 
 static void app_sensor_get_cb(const app_sensor_server_t * p_server,
                               uint16_t property_id,
@@ -411,7 +411,7 @@ static void button_event_handler(uint32_t button_number)
         case 2:
         {
             m_pir_motion_sensed_in_period = (m_pir_motion_sensed_in_period > 10)
-                                          ? m_pir_motion_sensed_in_period + 1
+                                          ? m_pir_motion_sensed_in_period - 10
                                           : 0;
             break;
         }

@@ -1,5 +1,5 @@
 build/beaconing_nrf52832_xxAA_s132_7.2.0_Debug/obj/timer_scheduler.o: \
- D:\GIT\nrf5_mesh\mesh\core\src\timer_scheduler.c \
+ D:\GIT\nrf5sdkformeshv500src\mesh\core\src\timer_scheduler.c \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.62/include/string.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.62/include/__crossworks.h \
  ../../mesh/core/include/timer_scheduler.h \

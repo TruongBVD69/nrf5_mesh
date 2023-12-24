@@ -1,5 +1,5 @@
 build/beaconing_nrf52832_xxAA_s132_7.2.0_Debug/obj/bearer_handler.o: \
- D:\GIT\nrf5_mesh\mesh\bearer\src\bearer_handler.c \
+ D:\GIT\nrf5sdkformeshv500src\mesh\bearer\src\bearer_handler.c \
  ../../mesh/bearer/include/bearer_handler.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.62/include/stdint.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.62/include/stdbool.h \

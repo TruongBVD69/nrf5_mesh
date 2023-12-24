@@ -1,5 +1,5 @@
 build/beaconing_nrf52832_xxAA_s132_7.2.0_Debug/obj/mesh_pa_lna.o: \
- D:\GIT\nrf5_mesh\mesh\bearer\src\mesh_pa_lna.c \
+ D:\GIT\nrf5sdkformeshv500src\mesh\bearer\src\mesh_pa_lna.c \
  ../../mesh/bearer/api/mesh_pa_lna.h \
  ../../mesh/bearer/api/nrf_mesh_config_bearer.h \
  ../../mesh/core/api/nrf_mesh_defines.h \

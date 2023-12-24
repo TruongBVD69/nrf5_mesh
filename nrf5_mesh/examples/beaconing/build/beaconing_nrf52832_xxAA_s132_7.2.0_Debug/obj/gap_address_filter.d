@@ -1,5 +1,5 @@
 build/beaconing_nrf52832_xxAA_s132_7.2.0_Debug/obj/gap_address_filter.o: \
- D:\GIT\nrf5_mesh\mesh\bearer\src\gap_address_filter.c \
+ D:\GIT\nrf5sdkformeshv500src\mesh\bearer\src\gap_address_filter.c \
  ../../mesh/bearer/api/gap_address_filter.h \
  ../../mesh/core/api/nrf_mesh.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.62/include/stdint.h \

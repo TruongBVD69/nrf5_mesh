@@ -1,5 +1,6 @@
 build/beaconing_nrf52832_xxAA_s132_7.2.0_Debug/obj/lpn.o: \
- D:\GIT\nrf5_mesh\mesh\core\src\lpn.c ../../mesh/core/api/mesh_lpn.h \
+ D:\GIT\nrf5sdkformeshv500src\mesh\core\src\lpn.c \
+ ../../mesh/core/api/mesh_lpn.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.62/include/stdint.h \
  ../../mesh/core/api/mesh_friendship_types.h \
  ../../mesh/core/api/nrf_mesh_events.h \

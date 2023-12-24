@@ -1,5 +1,5 @@
 build/beaconing_nrf52832_xxAA_s132_7.2.0_Debug/obj/ad_type_filter.o: \
- D:\GIT\nrf5_mesh\mesh\bearer\src\ad_type_filter.c \
+ D:\GIT\nrf5sdkformeshv500src\mesh\bearer\src\ad_type_filter.c \
  ../../mesh/bearer/api/ad_type_filter.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.62/include/stdint.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.62/include/stdbool.h \

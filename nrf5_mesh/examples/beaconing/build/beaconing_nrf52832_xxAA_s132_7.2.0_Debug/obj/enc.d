@@ -1,5 +1,6 @@
 build/beaconing_nrf52832_xxAA_s132_7.2.0_Debug/obj/enc.o: \
- D:\GIT\nrf5_mesh\mesh\core\src\enc.c ../../mesh/core/include/enc.h \
+ D:\GIT\nrf5sdkformeshv500src\mesh\core\src\enc.c \
+ ../../mesh/core/include/enc.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.62/include/stdbool.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.62/include/stdint.h \
  ../../mesh/core/include/ccm_soft.h ../../mesh/core/api/nrf_mesh.h \

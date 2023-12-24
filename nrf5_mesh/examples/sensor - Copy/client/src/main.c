@@ -271,8 +271,9 @@ static void app_sensor_client_status_cb(const sensor_client_t * p_self,
             data_entry_count++;
             if (SENSOR_MOTION_SENSED_PROPERTY_ID == sensor_data.mpid.property_id)
             {
-                uint8_t b_exp;
-                uint8_t value = sensor_percentage8_parse(*(sensor_data.raw_value), &b_exp);
+                uint16_t b_exp;
+                uint16_t value = sensor_percentage8_parse(*(sensor_data.raw_value), &b_exp);
+                //uint16_t value = (*(sensor_data.raw_value) >>1);
                 __LOG(LOG_SRC_APP, LOG_LEVEL_INFO,
                       "Sensor client: 0x%04x, type=%d, raw value: %d, value: %d.%d\n",
                       p_meta->src.value, p_meta->src.type,

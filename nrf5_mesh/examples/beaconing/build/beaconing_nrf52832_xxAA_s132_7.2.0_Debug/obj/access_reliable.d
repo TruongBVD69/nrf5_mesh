@@ -1,5 +1,5 @@
 build/beaconing_nrf52832_xxAA_s132_7.2.0_Debug/obj/access_reliable.o: \
- D:\GIT\nrf5_mesh\mesh\access\src\access_reliable.c \
+ D:\GIT\nrf5sdkformeshv500src\mesh\access\src\access_reliable.c \
  ../../mesh/access/api/access_reliable.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.62/include/stdint.h \
  ../../mesh/access/api/access.h \

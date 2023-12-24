@@ -1,5 +1,5 @@
 build/beaconing_nrf52832_xxAA_s132_7.2.0_Debug/obj/SEGGER_RTT_printf.o: \
- D:\GIT\nrf5_mesh\external\rtt\src\SEGGER_RTT_printf.c \
+ D:\GIT\nrf5sdkformeshv500src\external\rtt\src\SEGGER_RTT_printf.c \
  ../../external/rtt/include/SEGGER_RTT.h \
  ../../external/rtt/include/SEGGER_RTT_Conf.h \
  ../../external/rtt/include/SEGGER_RTT_Conf.h \

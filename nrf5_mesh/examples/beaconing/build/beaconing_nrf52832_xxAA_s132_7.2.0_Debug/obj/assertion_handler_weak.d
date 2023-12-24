@@ -1,5 +1,5 @@
 build/beaconing_nrf52832_xxAA_s132_7.2.0_Debug/obj/assertion_handler_weak.o: \
- D:\GIT\nrf5_mesh\examples\common\src\assertion_handler_weak.c \
+ D:\GIT\nrf5sdkformeshv500src\examples\common\src\assertion_handler_weak.c \
  d:\git\nrf5_sdk_17.0.2_d674dde\components\libraries\util\app_error.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.62/include/stdint.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.62/include/stdio.h \

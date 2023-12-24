@@ -1,5 +1,5 @@
 build/beaconing_nrf52832_xxAA_s132_7.2.0_Debug/obj/ble_softdevice_support.o: \
- D:\GIT\nrf5_mesh\examples\common\src\ble_softdevice_support.c \
+ D:\GIT\nrf5sdkformeshv500src\examples\common\src\ble_softdevice_support.c \
  ../common/include/ble_softdevice_support.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.62/include/stdint.h \
  ../common/include/nrf_mesh_config_examples.h \

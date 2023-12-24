@@ -228,7 +228,7 @@ typedef struct
     /** Opcode for the message. */
     access_opcode_t opcode;
     /** Pointer to the message data. */
-    const uint8_t * p_buffer;
+    const uint16_t * p_buffer;
     /** Length of the data (excluding the opcode). */
     uint16_t length;
     /** Forces the message to be sent out as a segmented message, if message is shorter than the size

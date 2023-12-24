@@ -73,6 +73,7 @@
 #include "app_scene.h"
 
 #include "nrf_delay.h"
+#include "ds18b20.h"
 
 /*****************************************************************************
  * Definitions
@@ -109,6 +110,8 @@ static nrf_mesh_evt_handler_t m_event_handler =
     .evt_cb = mesh_events_handle,
 };
 
+float temp =0;
+
 /* Light Lightness Setup Server related variables */
 
 /* Light Lightness Setup Server structure definition and initialization */
@@ -137,7 +140,7 @@ static uint16_t m_pwm0_present_actual_lightness = 0;
  * between 0 and max.
  */
 static APP_PWM_INSTANCE(PWM0, 1);
-static app_pwm_config_t m_pwm0_config = APP_PWM_DEFAULT_CONFIG_1CH(200, BSP_LED_2);
+static app_pwm_config_t m_pwm0_config = APP_PWM_DEFAULT_CONFIG_1CH(200, BSP_LED_0);
 static pwm_utils_contex_t m_pwm = {
                                     .p_pwm = &PWM0,
                                     .p_pwm_config = &m_pwm0_config,
@@ -150,7 +153,7 @@ static pwm_utils_contex_t m_pwm = {
 /* Callback for updating the hardware state */
 static void set_lightness_cb(const app_light_lightness_setup_server_t * p_app, uint16_t lightness)
 {
-    m_pwm0_present_actual_lightness = lightness;
+    m_pwm0_present_actual_lightness = m_pwm0_present_actual_lightness;
     (void)pwm_utils_level_set_unsigned(&m_pwm, m_pwm0_present_actual_lightness);
 }
 
@@ -433,12 +436,12 @@ int main(void)
 {
     initialize();
     start();
-
+    ds18b20_setResolution(12);
     for (;;)
     {
         (void)sd_app_evt_wait();
-        m_pwm0_present_actual_lightness++;
-        //app_light_lightness_current_value_publish(&m_light_lightness_server_0);
+        temp = ds18b20_get_temp_method_2();
+        m_pwm0_present_actual_lightness = temp*100;
          __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "data=%d\n", m_pwm0_present_actual_lightness);
         nrf_delay_ms(2000);
     }

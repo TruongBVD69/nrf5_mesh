@@ -1,5 +1,5 @@
 build/beaconing_nrf52832_xxAA_s132_7.2.0_Debug/obj/toolchain.o: \
- D:\GIT\nrf5_mesh\mesh\core\src\toolchain.c \
+ D:\GIT\nrf5sdkformeshv500src\mesh\core\src\toolchain.c \
  ../../mesh/core/include/toolchain.h \
  d:\git\nrf5_sdk_17.0.2_d674dde\modules\nrfx\mdk\nrf.h \
  d:\git\nrf5_sdk_17.0.2_d674dde\modules\nrfx\mdk\nrf52.h \

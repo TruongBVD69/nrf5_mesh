@@ -157,8 +157,8 @@ typedef struct
  */
 typedef void (*app_sensor_get_cb_t)(const app_sensor_server_t * p_server,
                                     uint16_t property_id,
-                                    uint8_t * p_out,
-                                    uint16_t * p_out_bytes);
+                                    uint16_t * p_out,
+                                    uint32_t * p_out_bytes);
 
 
 /** Application state read settings callback prototype.
@@ -314,7 +314,7 @@ struct __app_sensor_server_t
     const sensor_descriptor_t * p_sensor_descriptor;
     /** Points to the message buffer.
      */
-    uint8_t * p_message_buffer;
+    uint16_t * p_message_buffer;
     /** The number of bytes of buffer space at p_message_buffer.
      */
     uint16_t message_buffer_bytes;

@@ -1,5 +1,5 @@
 build/beaconing_nrf52832_xxAA_s132_7.2.0_Debug/obj/advertiser.o: \
- D:\GIT\nrf5_mesh\mesh\bearer\src\advertiser.c \
+ D:\GIT\nrf5sdkformeshv500src\mesh\bearer\src\advertiser.c \
  ../../mesh/bearer/api/advertiser.h ../../mesh/bearer/include/broadcast.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.62/include/stdint.h \
  ../../mesh/bearer/include/radio_config.h \

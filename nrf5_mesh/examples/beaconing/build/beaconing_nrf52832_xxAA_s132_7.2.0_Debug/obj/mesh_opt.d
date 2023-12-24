@@ -1,5 +1,5 @@
 build/beaconing_nrf52832_xxAA_s132_7.2.0_Debug/obj/mesh_opt.o: \
- D:\GIT\nrf5_mesh\mesh\core\src\mesh_opt.c \
+ D:\GIT\nrf5sdkformeshv500src\mesh\core\src\mesh_opt.c \
  ../../mesh/core/include/mesh_opt.h \
  ../../mesh/core/api/mesh_config_entry.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.62/include/stdint.h \

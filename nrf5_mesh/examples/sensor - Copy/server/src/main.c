@@ -1,40 +1,3 @@
-/* Copyright (c) 2010 - 2020, Nordic Semiconductor ASA
- * All rights reserved.
- *
- * Redistribution and use in source and binary forms, with or without modification,
- * are permitted provided that the following conditions are met:
- *
- * 1. Redistributions of source code must retain the above copyright notice, this
- * list of conditions and the following disclaimer.
- *
- * 2. Redistributions in binary form, except as embedded into a Nordic
- *    Semiconductor ASA integrated circuit in a product or a software update for
- *    such product, must reproduce the above copyright notice, this list of
- *    conditions and the following disclaimer in the documentation and/or other
- *    materials provided with the distribution.
- *
- * 3. Neither the name of Nordic Semiconductor ASA nor the names of its
- *    contributors may be used to endorse or promote products derived from this
- *    software without specific prior written permission.
- *
- * 4. This software, with or without modification, must only be used with a
- *    Nordic Semiconductor ASA integrated circuit.
- *
- * 5. Any software provided in binary form under this license must not be reverse
- *    engineered, decompiled, modified and/or disassembled.
- *
- * THIS SOFTWARE IS PROVIDED BY NORDIC SEMICONDUCTOR ASA "AS IS" AND ANY EXPRESS
- * OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
- * OF MERCHANTABILITY, NONINFRINGEMENT, AND FITNESS FOR A PARTICULAR PURPOSE ARE
- * DISCLAIMED. IN NO EVENT SHALL NORDIC SEMICONDUCTOR ASA OR CONTRIBUTORS BE
- * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
- * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE
- * GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
- * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
- * LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT
- * OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
- */
-
 #include <stdint.h>
 #include <string.h>
 
@@ -83,7 +46,8 @@
 
 #define UNSPECIFIED 0
 
-#define APP_SENSOR_ELEMENT_INDEX     (0)
+#define APP_SENSOR_1_ELEMENT_INDEX     (0)
+#define APP_SENSOR_2_ELEMENT_INDEX     (1)
 
 static bool m_device_provisioned;
 static float temp = 0;
@@ -92,8 +56,8 @@ static float temp = 0;
 
 static void app_sensor_get_cb(const app_sensor_server_t * p_server,
                               uint16_t property_id,
-                              uint8_t * p_sensor_data,
-                              uint16_t * p_out_bytes);
+                              uint16_t * p_sensor_data,
+                              uint32_t * p_out_bytes);
 
 static void app_sensor_settings_get_cb(const app_sensor_server_t * p_server,
                                        uint16_t property_id,
@@ -143,9 +107,11 @@ static const sensor_descriptor_t m_pir_descriptor[NUM_DESCRIPTORS] =
     }
 };
 
+
 /* The first item in the array gives the number of listed/supported property ids.
  */
 static uint16_t property_array[] = {1, SENSOR_MOTION_SENSED_PROPERTY_ID};
+
 
 /* Define a cadence timer and a min interval timer for each of the properties that the
  * server supports.
@@ -163,7 +129,8 @@ static app_timer_id_t min_interval_timer_ids[1] =
     &m_sensor_server_0_min_interval_timer_0_data
 };
 
-static uint8_t m_message_buffer[APP_CONFIG_MAX_MESSAGE_BYTES];
+static uint16_t m_message_buffer_1[APP_CONFIG_MAX_MESSAGE_BYTES];
+static uint16_t m_message_buffer_2[APP_CONFIG_MAX_MESSAGE_BYTES];
 
 APP_SENSOR_SERVER_DEF(m_sensor_server_0,
                       APP_CONFIG_FORCE_SEGMENTATION,
@@ -179,17 +146,35 @@ APP_SENSOR_SERVER_DEF(m_sensor_server_0,
                       min_interval_timer_ids,
                       m_pir_descriptor,
                       NUM_DESCRIPTORS,
-                      m_message_buffer,
-                      sizeof(m_message_buffer))
+                      m_message_buffer_1,
+                      sizeof(m_message_buffer_1))
+
+APP_SENSOR_SERVER_DEF(m_sensor_server_1,
+                      APP_CONFIG_FORCE_SEGMENTATION,
+                      APP_CONFIG_MIC_SIZE,
+                      app_sensor_get_cb,
+                      app_sensor_settings_get_cb,
+                      app_sensor_setting_set_cb,
+                      app_sensor_setting_get_cb,
+                      app_sensor_column_get_cb,
+                      app_sensor_series_get_cb,
+                      property_array,
+                      cadence_timer_ids,
+                      min_interval_timer_ids,
+                      m_pir_descriptor,
+                      NUM_DESCRIPTORS,
+                      m_message_buffer_2,
+                      sizeof(m_message_buffer_2))
 
 
 
 static uint16_t m_pir_motion_sensed_in_period ;
+static uint16_t m_pir_motion_sensed_in_period1 ;
 
 static void app_sensor_get_cb(const app_sensor_server_t * p_server,
                               uint16_t property_id,
-                              uint8_t * p_out,
-                              uint16_t * p_out_bytes)
+                              uint16_t * p_out,
+                              uint32_t * p_out_bytes)
 {
     uint16_t required_out_bytes;
 
@@ -239,7 +224,7 @@ static void app_sensor_get_cb(const app_sensor_server_t * p_server,
      */
     p_out[0] = sensor_percentage8_create(m_pir_motion_sensed_in_period, 0);
 
-    *p_out_bytes = 1;
+    *p_out_bytes = 2;
 }
 
 
@@ -404,41 +389,11 @@ static void button_event_handler(uint32_t button_number)
 {
     button_number++; /* Increase to match number printed on DK */
     __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Button %u pressed\n", button_number);
+    
+    m_pir_motion_sensed_in_period++;
 
     switch (button_number)
     {
-        case 1:
-        {
-            m_pir_motion_sensed_in_period = (m_pir_motion_sensed_in_period > 1)
-                                          ? m_pir_motion_sensed_in_period - 1
-                                          : 0;
-            break;
-        }
-
-        case 2:
-        {
-            m_pir_motion_sensed_in_period = (m_pir_motion_sensed_in_period > 10)
-                                          ? m_pir_motion_sensed_in_period + 1
-                                          : 0;
-            break;
-        }
-
-        case 3:
-        {
-            m_pir_motion_sensed_in_period = (m_pir_motion_sensed_in_period < 99)
-                                          ? m_pir_motion_sensed_in_period + 1
-                                          : 100;
-            break;
-        }
-
-        case 4:
-        {
-            m_pir_motion_sensed_in_period = (m_pir_motion_sensed_in_period < 90)
-                                          ? m_pir_motion_sensed_in_period + 10
-                                          : 100;
-            break;
-        }
-
         case 5:
         {
             /* Clear all the states to reset the node. */
@@ -464,9 +419,9 @@ static void button_event_handler(uint32_t button_number)
 
     if (button_number >= 1 && button_number <= 4)
     {
-        //float temp
         __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "mocked motion sensed =  %d%%\n", m_pir_motion_sensed_in_period);
         (void)sensor_status_publish(&m_sensor_server_0, SENSOR_MOTION_SENSED_PROPERTY_ID);
+ 
     }
 }
 
@@ -520,13 +475,19 @@ static void models_init_cb(void)
 {
     __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "Initializing and adding models\n");
 
-    uint32_t ret = app_sensor_init(&m_sensor_server_0, APP_SENSOR_ELEMENT_INDEX);
+    uint32_t ret = app_sensor_init(&m_sensor_server_0, APP_SENSOR_1_ELEMENT_INDEX);
 
     APP_ERROR_CHECK(ret);
 
     __LOG(LOG_SRC_APP, LOG_LEVEL_INFO,
-          "App Sensor Setup Server Model Handle - no errs: %d\n",
-          m_sensor_server_0.server.model_handle);
+          "App Sensor Setup Server 1 Model Handle: %d, Element index: %d\n",
+          m_sensor_server_0.server.model_handle, m_sensor_server_0.server.settings.element_index);
+
+   APP_ERROR_CHECK(app_sensor_init(&m_sensor_server_1, APP_SENSOR_2_ELEMENT_INDEX));
+   __LOG(LOG_SRC_APP, LOG_LEVEL_INFO,
+          "App Sensor Setup Server 2 Model Handle: %d, Element index: %d\n",
+          m_sensor_server_1.server.model_handle, m_sensor_server_1.server.settings.element_index);
+
 }
 
 static void mesh_init(void)
@@ -633,7 +594,12 @@ int main(void)
         (void)sd_app_evt_wait();
         temp = ds18b20_get_temp_method_2();
 
-        m_pir_motion_sensed_in_period = (uint16_t)(temp*100);
+        //m_pir_motion_sensed_in_period = (uint16_t)(temp*100);
+        m_pir_motion_sensed_in_period = m_pir_motion_sensed_in_period +10 ;
+        if(m_pir_motion_sensed_in_period > 200)
+        {
+          m_pir_motion_sensed_in_period = 0;
+          }
         __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "data=%d\n", m_pir_motion_sensed_in_period);
         __LOG(LOG_SRC_APP, LOG_LEVEL_INFO, "data1="NRF_LOG_FLOAT_MARKER, NRF_LOG_FLOAT(temp));
         nrf_delay_ms(2000);

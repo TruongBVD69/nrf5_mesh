@@ -1,5 +1,5 @@
 build/beaconing_nrf52832_xxAA_s132_7.2.0_Debug/obj/app_timer_mesh.o: \
- D:\GIT\nrf5_mesh\external\app_timer\app_timer_mesh.c \
+ D:\GIT\nrf5sdkformeshv500src\external\app_timer\app_timer_mesh.c \
  d:\git\nrf5_sdk_17.0.2_d674dde\components\libraries\util\sdk_common.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.62/include/stdint.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.62/include/stdbool.h \
@@ -42,12 +42,12 @@ build/beaconing_nrf52832_xxAA_s132_7.2.0_Debug/obj/app_timer_mesh.o: \
  d:\git\nrf5_sdk_17.0.2_d674dde\components\softdevice\s132\headers\nrf_svc.h \
  d:\git\nrf5_sdk_17.0.2_d674dde\components\softdevice\s132\headers\nrf_error.h \
  d:\git\nrf5_sdk_17.0.2_d674dde\components\softdevice\s132\headers\nrf_error_soc.h \
- d:\git\nrf5_sdk_17.0.2_d674dde\components\libraries\delay\nrf_delay.h \
+ D:/GIT/nRF5_SDK_17.0.2_d674dde/components/libraries/delay/nrf_delay.h \
  d:\git\nrf5_sdk_17.0.2_d674dde\modules\nrfx\nrfx.h \
- d:\git\nrf5_sdk_17.0.2_d674dde\integration\nrfx\nrfx_config.h \
+ D:/GIT/nRF5_SDK_17.0.2_d674dde/integration/nrfx/nrfx_config.h \
  d:\git\nrf5_sdk_17.0.2_d674dde\modules\nrfx\drivers\nrfx_common.h \
- d:\git\nrf5_sdk_17.0.2_d674dde\integration\nrfx\nrfx_glue.h \
- d:\git\nrf5_sdk_17.0.2_d674dde\integration\nrfx\legacy\apply_old_config.h \
+ D:/GIT/nRF5_SDK_17.0.2_d674dde/integration/nrfx/nrfx_glue.h \
+ D:/GIT/nRF5_SDK_17.0.2_d674dde/integration/nrfx/legacy/apply_old_config.h \
  d:\git\nrf5_sdk_17.0.2_d674dde\modules\nrfx\soc\nrfx_irqs.h \
  d:\git\nrf5_sdk_17.0.2_d674dde\modules\nrfx\soc\nrfx_irqs_nrf52832.h \
  d:\git\nrf5_sdk_17.0.2_d674dde\components\libraries\util\nrf_assert.h \

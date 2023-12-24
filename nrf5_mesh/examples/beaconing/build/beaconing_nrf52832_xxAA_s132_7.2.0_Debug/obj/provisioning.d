@@ -1,5 +1,5 @@
 build/beaconing_nrf52832_xxAA_s132_7.2.0_Debug/obj/provisioning.o: \
- D:\GIT\nrf5_mesh\mesh\prov\src\provisioning.c \
+ D:\GIT\nrf5sdkformeshv500src\mesh\prov\src\provisioning.c \
  ../../mesh/prov/include/provisioning.h \
  ../../mesh/prov/include/prov_pdu.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.62/include/stdint.h \

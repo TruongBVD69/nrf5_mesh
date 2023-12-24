@@ -1,5 +1,5 @@
 build/beaconing_nrf52832_xxAA_s132_7.2.0_Debug/obj/app_timer_workaround.o: \
- D:\GIT\nrf5_mesh\external\app_timer\app_timer_workaround.c \
+ D:\GIT\nrf5sdkformeshv500src\external\app_timer\app_timer_workaround.c \
  d:\git\nrf5_sdk_17.0.2_d674dde\components\libraries\util\sdk_common.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.62/include/stdint.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.62/include/stdbool.h \

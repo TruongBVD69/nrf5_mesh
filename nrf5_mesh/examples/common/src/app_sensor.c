@@ -360,7 +360,7 @@ static void sensor_cadence_set_cb(const sensor_setup_server_t * p_self,
     if (sensor_cadence_set(p_app_server, p_in, in_bytes, p_out, p_out_bytes))
     {
         (void) sensor_server_setup_status_publish(p_self,
-                                                  (const uint8_t *)p_out,
+                                                  (const uint16_t *)p_out,
                                                   *p_out_bytes,
                                                   SENSOR_OPCODE_CADENCE_STATUS);
     }
@@ -439,7 +439,7 @@ static void sensor_setting_set_cb(const sensor_setup_server_t * p_self,
      */
 
     (void) sensor_server_setup_status_publish(p_self,
-                                              (const uint8_t *)p_out,
+                                              (const uint16_t *)p_out,
                                               *p_out_bytes,
                                               SENSOR_OPCODE_SETTING_STATUS);
 }

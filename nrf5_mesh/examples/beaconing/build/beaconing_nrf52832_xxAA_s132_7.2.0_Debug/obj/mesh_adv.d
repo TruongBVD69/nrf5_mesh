@@ -1,5 +1,5 @@
 build/beaconing_nrf52832_xxAA_s132_7.2.0_Debug/obj/mesh_adv.o: \
- D:\GIT\nrf5_mesh\examples\common\src\mesh_adv.c \
+ D:\GIT\nrf5sdkformeshv500src\examples\common\src\mesh_adv.c \
  ../../mesh/gatt/api/mesh_adv.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.62/include/stdint.h \
  d:\git\nrf5_sdk_17.0.2_d674dde\components\softdevice\s132\headers\ble_gap.h \

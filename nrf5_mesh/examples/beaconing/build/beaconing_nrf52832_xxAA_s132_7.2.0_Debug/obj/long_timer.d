@@ -1,5 +1,5 @@
 build/beaconing_nrf52832_xxAA_s132_7.2.0_Debug/obj/long_timer.o: \
- D:\GIT\nrf5_mesh\mesh\core\src\long_timer.c \
+ D:\GIT\nrf5sdkformeshv500src\mesh\core\src\long_timer.c \
  ../../mesh/core/include/long_timer.h \
  ../../mesh/core/include/timer_scheduler.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.62/include/stdint.h \

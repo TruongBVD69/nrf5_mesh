@@ -1,5 +1,5 @@
 build/beaconing_nrf52832_xxAA_s132_7.2.0_Debug/obj/msg_cache.o: \
- D:\GIT\nrf5_mesh\mesh\core\src\msg_cache.c \
+ D:\GIT\nrf5sdkformeshv500src\mesh\core\src\msg_cache.c \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.62/include/stdbool.h \
  ../../mesh/core/include/msg_cache.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.62/include/stdint.h \

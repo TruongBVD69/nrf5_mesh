@@ -1,9 +1,7 @@
 <!DOCTYPE CrossStudio_Session_File>
 <session>
  <Bookmarks/>
- <Breakpoints groups="Breakpoints" active_group="Breakpoints">
-  <Exceptions set="MemManage;UsageFault_Coprocessor;UsageFault_CheckingError;UsageFault_StateError;BusFault;ExceptionEntryReturnFault;HardFault"/>
- </Breakpoints>
+ <Breakpoints groups="Breakpoints" active_group="Breakpoints"/>
  <ExecutionProfileWindow/>
  <FrameBufferWindow>
   <FrameBufferWindow bufferHeight="-1" addressSpace="" addressText="" bufferWidth="-1"/>
@@ -65,12 +63,13 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="39" y="246" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="src/main.c" selected="1" top="232" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="8" y="259" useTextEdit="1" openedFrom="D:/GIT/nrf5_mesh/examples/sensor/client/src/main.c" useBinaryEdit="0" left="0" path="../../../mesh/core/include/log.h" selected="0" top="244" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="include/sdk_config.h" selected="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="17" y="150" useTextEdit="1" openedFrom="D:/GIT/nrf5_mesh/examples/sensor/client/src/main.c" useBinaryEdit="0" left="0" path="../../common/include/mesh_provisionee.h" selected="0" top="42" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="8" y="64" useTextEdit="1" openedFrom="D:/GIT/nrf5_mesh/examples/sensor/client/src/main.c" useBinaryEdit="0" left="0" path="include/nrf_mesh_config_app.h" selected="0" top="125" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="9" y="450" useTextEdit="1" openedFrom="D:/GIT/nrf5_mesh/examples/sensor/client/src/main.c" useBinaryEdit="0" left="0" path="../../../models/model_spec/sensor/src/sensor_client.c" selected="0" top="502" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="62" y="248" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="src/main.c" selected="0" top="236" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="798" useTextEdit="1" openedFrom="D:/GIT/nrf5_mesh/examples/sensor - Copy/client/src/main.c" useBinaryEdit="0" left="0" path="../../common/src/app_sensor_utils.c" selected="0" top="821" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="56" y="117" useTextEdit="1" openedFrom="D:/GIT/nrf5_mesh/examples/common/src/app_sensor_utils.c" useBinaryEdit="0" left="0" path="../../common/include/app_sensor_utils.h" selected="0" top="102" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="2" y="284" useTextEdit="1" openedFrom="D:/GIT/nrf5_mesh/examples/sensor - Copy/client/src/main.c" useBinaryEdit="0" left="0" path="../../../models/model_spec/sensor/include/sensor_messages.h" selected="1" top="267" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="13" y="59" useTextEdit="1" openedFrom="D:/GIT/nrf5_mesh/examples/sensor - Copy/client/src/main.c" useBinaryEdit="0" left="0" path="../../../models/model_spec/sensor/include/sensor_client.h" selected="0" top="51" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="9" y="585" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../models/model_spec/sensor/src/sensor_setup_server.c" selected="0" top="557" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="8" y="62" useTextEdit="1" openedFrom="D:/GIT/nrf5_mesh/examples/common/src/app_sensor_utils.c" useBinaryEdit="0" left="0" path="../../../models/model_spec/sensor/include/sensor_utils.h" selected="0" top="48" codecName="Default"/>
  </Files>
  <ARMCrossStudioWindow activeProject="sensor_client_nrf52832_xxAA_s132_7.2.0" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="" debugSearchPath="" autoConnectCapabilities="3711"/>
 </session>

@@ -1,5 +1,5 @@
 build/beaconing_nrf52832_xxAA_s132_7.2.0_Debug/obj/mesh_config_flashman_glue.o: \
- D:\GIT\nrf5_mesh\mesh\core\src\mesh_config_flashman_glue.c \
+ D:\GIT\nrf5sdkformeshv500src\mesh\core\src\mesh_config_flashman_glue.c \
  d:\git\nrf5_sdk_17.0.2_d674dde\components\softdevice\s132\headers\nrf_error.h \
  ../../mesh/core/include/mesh_config_backend_glue.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.62/include/stdlib.h \

@@ -66,7 +66,7 @@ static uint32_t server_publish(const sensor_server_t * p_server,
     access_message_tx_t reply =
     {
         .opcode = ACCESS_OPCODE_SIG(status_opcode),
-        .p_buffer = (const uint8_t *)p_status_message,
+        .p_buffer = (const uint16_t *)p_status_message,
         .length = bytes,
         .force_segmented = p_server->settings.force_segmented,
         .transmic_size = p_server->settings.transmic_size
@@ -77,7 +77,7 @@ static uint32_t server_publish(const sensor_server_t * p_server,
 
 static uint32_t server_respond(sensor_server_t * p_server,
                                const access_message_rx_t * p_access_message,
-                               const uint8_t * p_message,
+                               const uint16_t * p_message,
                                uint16_t bytes,
                                sensor_opcode_t status_opcode)
 {
@@ -95,7 +95,7 @@ static uint32_t server_respond(sensor_server_t * p_server,
 
 
 static uint32_t setup_server_publish(const sensor_setup_server_t * p_s_server,
-                                     const uint8_t * p_message,
+                                     const uint16_t * p_message,
                                      uint16_t bytes,
                                      sensor_opcode_t status_opcode)
 {
@@ -113,7 +113,7 @@ static uint32_t setup_server_publish(const sensor_setup_server_t * p_s_server,
 
 static uint32_t setup_server_respond(sensor_setup_server_t * p_s_server,
                                      const access_message_rx_t * p_access_message,
-                                     const uint8_t * p_message,
+                                     const uint16_t * p_message,
                                      uint16_t bytes,
                                      sensor_opcode_t status_opcode)
 {
@@ -203,7 +203,7 @@ static void handle_get(access_model_handle_t model_handle,
      */
     if (bytes != 0)
     {
-        (void) server_respond(p_server, p_rx_msg, (const uint8_t *)p_out, bytes, SENSOR_OPCODE_STATUS);
+        (void) server_respond(p_server, p_rx_msg, (const uint16_t *)p_out, bytes, SENSOR_OPCODE_STATUS);
     }
 }
 
@@ -247,7 +247,7 @@ static void handle_descriptor_get(access_model_handle_t model_handle,
      */
     if (bytes != 0)
     {
-        (void) server_respond(p_server, p_rx_msg, (const uint8_t *)p_out, bytes, SENSOR_OPCODE_DESCRIPTOR_STATUS);
+        (void) server_respond(p_server, p_rx_msg, (const uint16_t *)p_out, bytes, SENSOR_OPCODE_DESCRIPTOR_STATUS);
     }
 }
 
@@ -285,7 +285,7 @@ static void handle_column_get(access_model_handle_t model_handle,
      */
     if (bytes != 0)
     {
-        (void) server_respond(p_server, p_rx_msg, (const uint8_t *)p_out, bytes, SENSOR_OPCODE_COLUMN_STATUS);
+        (void) server_respond(p_server, p_rx_msg, (const uint16_t *)p_out, bytes, SENSOR_OPCODE_COLUMN_STATUS);
     }
 }
 
@@ -323,7 +323,7 @@ static void handle_series_get(access_model_handle_t model_handle,
      */
     if (bytes != 0)
     {
-        (void) server_respond(p_server, p_rx_msg, (const uint8_t *)p_out, bytes, SENSOR_OPCODE_SERIES_STATUS);
+        (void) server_respond(p_server, p_rx_msg, (const uint16_t *)p_out, bytes, SENSOR_OPCODE_SERIES_STATUS);
     }
 }
 
@@ -370,7 +370,7 @@ static void handle_cadence_get(access_model_handle_t model_handle,
      */
     if (bytes != 0)
     {
-        (void) setup_server_respond(p_s_server, p_rx_msg, (const uint8_t *)p_out, bytes,
+        (void) setup_server_respond(p_s_server, p_rx_msg, (const uint16_t *)p_out, bytes,
                                     SENSOR_OPCODE_CADENCE_STATUS);
     }
 }
@@ -413,7 +413,7 @@ static void handle_cadence_set(access_model_handle_t model_handle,
      */
     if (SENSOR_OPCODE_CADENCE_SET == p_rx_msg->opcode.opcode && bytes != 0)
     {
-        (void) setup_server_respond(p_s_server, p_rx_msg, (const uint8_t *)p_out, bytes,
+        (void) setup_server_respond(p_s_server, p_rx_msg, (const uint16_t *)p_out, bytes,
                                     SENSOR_OPCODE_CADENCE_STATUS);
     }
 }
@@ -448,7 +448,7 @@ static void handle_settings_get(access_model_handle_t model_handle,
      */
     if (bytes != 0)
     {
-        (void) setup_server_respond(p_s_server, p_rx_msg, (const uint8_t *)p_out, bytes,
+        (void) setup_server_respond(p_s_server, p_rx_msg, (const uint16_t *)p_out, bytes,
                                     SENSOR_OPCODE_SETTINGS_STATUS);
     }
 }
@@ -486,7 +486,7 @@ static void handle_setting_get(access_model_handle_t model_handle,
      */
     if (bytes != 0)
     {
-        (void) setup_server_respond(p_s_server, p_rx_msg, (const uint8_t *)p_out, bytes,
+        (void) setup_server_respond(p_s_server, p_rx_msg, (const uint16_t *)p_out, bytes,
                                     SENSOR_OPCODE_SETTING_STATUS);
     }
 }
@@ -584,7 +584,7 @@ uint32_t sensor_server_status_publish(const sensor_server_t * p_server,
 }
 
 uint32_t sensor_server_setup_status_publish(const sensor_setup_server_t * p_s_server,
-                                            const uint8_t * p_message,
+                                            const uint16_t * p_message,
                                             uint16_t data_length,
                                             sensor_opcode_t status_opcode)
 {

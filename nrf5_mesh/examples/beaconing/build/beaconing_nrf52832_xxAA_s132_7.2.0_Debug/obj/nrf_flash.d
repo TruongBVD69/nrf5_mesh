@@ -1,5 +1,5 @@
 build/beaconing_nrf52832_xxAA_s132_7.2.0_Debug/obj/nrf_flash.o: \
- D:\GIT\nrf5_mesh\mesh\core\src\nrf_flash.c \
+ D:\GIT\nrf5sdkformeshv500src\mesh\core\src\nrf_flash.c \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.62/include/stdint.h \
  ../../mesh/core/include/nrf_flash.h \
  d:\git\nrf5_sdk_17.0.2_d674dde\modules\nrfx\mdk\nrf.h \

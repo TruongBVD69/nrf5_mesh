@@ -1,5 +1,5 @@
 build/beaconing_nrf52832_xxAA_s132_7.2.0_Debug/obj/health_server.o: \
- D:\GIT\nrf5_mesh\models\foundation\health\src\health_server.c \
+ D:\GIT\nrf5sdkformeshv500src\models\foundation\health\src\health_server.c \
  ../../models/foundation/health/include/health_messages.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.62/include/stdint.h \
  ../../models/foundation/health/include/health_opcodes.h \

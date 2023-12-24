@@ -66,7 +66,7 @@
 #define MAXIMIM_FAST_CADENCE_PERIOD_DIVISOR_VALUE (15)
 
 static uint64_t m_minimum_publish_interval;
-static uint8_t * mp_marshalled_data;
+static uint16_t * mp_marshalled_data;
 
 /* static function definitions.
  */
@@ -357,7 +357,7 @@ static bool motion_sensor_delta_trigger_fast(sensor_cadence_t * p)
     }
 }
 
-static uint16_t mpid_a_value_marshall(sensor_cadence_t * p, uint8_t * buffer, uint16_t buffer_bytes)
+static uint16_t mpid_a_value_marshall(sensor_cadence_t * p, uint16_t * buffer, uint16_t buffer_bytes)
 {
     /* @tagMeshMdlSp section 4.2.14 Sensor Status defines the marshalled data format.
      */
@@ -383,7 +383,7 @@ static uint16_t mpid_a_value_marshall(sensor_cadence_t * p, uint8_t * buffer, ui
 }
 
 
-static uint16_t mpid_b_value_marshall(sensor_cadence_t * p, uint8_t * buffer, uint16_t buffer_bytes)
+static uint16_t mpid_b_value_marshall(sensor_cadence_t * p, uint16_t * buffer, uint16_t buffer_bytes)
 {
     /* @tagMeshMdlSp section 4.2.14 Sensor Status defines the marshalled data format.
      */
@@ -410,7 +410,7 @@ static uint16_t mpid_b_value_marshall(sensor_cadence_t * p, uint8_t * buffer, ui
     return SENSOR_MPID_B_BYTES + p->range_value_bytes_allocated;
 }
 
-static uint8_t * cadence_serialize(sensor_cadence_t * p, uint8_t * p_buffer)
+static uint16_t * cadence_serialize(sensor_cadence_t * p, uint16_t * p_buffer)
 {
     memcpy(p_buffer, &p->property_id, sizeof(uint16_t));
     uint16_t offset = sizeof(uint16_t);
@@ -538,7 +538,7 @@ static sensor_cadence_t * cadence_initialize(sensor_cadence_t * p,
     /* Initialize the pointers.
      * The variable size data area follows the structure.
      */
-    uint8_t * p_data = (uint8_t *)&p[1];
+    uint16_t * p_data = (uint16_t *)&p[1];
 
     p->p_fast_cadence_low   = &p_data[0];
     p->p_fast_cadence_high  = &p_data[1 * range_vector_bytes];
@@ -693,7 +693,7 @@ static sensor_cadence_t * cadence_instance_get(app_sensor_server_t * p_server,
     return NULL;
 }
 
-static uint8_t * sensor_cadence_serialize(sensor_cadence_t * p, uint16_t * p_buffered_bytes)
+static uint16_t * sensor_cadence_serialize(sensor_cadence_t * p, uint16_t * p_buffered_bytes)
 {
     NRF_MESH_ASSERT(p);
 
@@ -703,7 +703,7 @@ static uint8_t * sensor_cadence_serialize(sensor_cadence_t * p, uint16_t * p_buf
 
 static void sensor_current_value_set(sensor_cadence_t * p)
 {
-    uint16_t bytes = p->range_value_bytes_allocated;
+    uint32_t bytes = p->range_value_bytes_allocated;
 
     ((app_sensor_server_t *)p->p_server)->sensor_get_cb(p->p_server, p->property_id,
                                                         p->p_current_value, &bytes);
@@ -830,7 +830,7 @@ uint8_t * sensor_marshalled_entry_parse(uint8_t * p_data_buf, uint8_t * p_format
     }
 }
 
-uint8_t sensor_percentage8_create(uint8_t value, uint8_t b_exp)
+uint16_t sensor_percentage8_create(uint16_t value, uint16_t b_exp)
 {
     NRF_MESH_ASSERT((b_exp == 0) || (b_exp == 1));
 
@@ -839,7 +839,7 @@ uint8_t sensor_percentage8_create(uint8_t value, uint8_t b_exp)
     return value;
 }
 
-uint8_t sensor_percentage8_parse(uint8_t value, uint8_t * b_exp)
+uint16_t sensor_percentage8_parse(uint16_t value, uint16_t * b_exp)
 {
     NRF_MESH_ASSERT(b_exp);
     *b_exp = value & 0x1;
@@ -902,7 +902,7 @@ sensor_cadence_t * sensor_cadence_to_buffer_deserialize(uint8_t * p_in_buffer,
     }
 }
 
-void sensor_cadence_to_buffer_serialize(sensor_cadence_t * p, uint8_t * p_buffer, uint16_t * p_bytes)
+void sensor_cadence_to_buffer_serialize(sensor_cadence_t * p, uint16_t * p_buffer, uint16_t * p_bytes)
 {
     NRF_MESH_ASSERT(p && p_buffer && p_bytes);
 

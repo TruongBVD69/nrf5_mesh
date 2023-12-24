@@ -57,7 +57,7 @@
  </Watch4>
  <Files>
   <SessionOpenFile windowGroup="DockEditLeft" x="77" y="18" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../doc/getting_started/SES.md" selected="0" top="3" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="638" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="src/main.c" selected="1" top="624" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="37" y="499" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="src/main.c" selected="1" top="198" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="include/nrf_mesh_config_app.h" selected="0" top="81" codecName="Default"/>
   <SessionOpenFile windowGroup="DockEditLeft" x="2" y="209" useTextEdit="1" openedFrom="D:/GIT/nrf5_mesh/examples/light_lightness - Copy/client/src/main.c" useBinaryEdit="0" left="0" path="../../../mesh/access/api/access.h" selected="0" top="189" codecName="Default"/>
  </Files>

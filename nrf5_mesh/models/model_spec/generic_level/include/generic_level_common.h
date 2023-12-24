@@ -62,7 +62,7 @@
  * Defines default value for the Generic Level state.
  */
 #ifndef GENERIC_LEVEL_DEFAULT_LEVEL
-#define GENERIC_LEVEL_DEFAULT_LEVEL     (0x02)
+#define GENERIC_LEVEL_DEFAULT_LEVEL     (0x0)
 #endif
 
 /**

@@ -1,5 +1,5 @@
 build/beaconing_nrf52832_xxAA_s132_7.2.0_Debug/obj/app_error_weak.o: \
- D:\GIT\nrf5_mesh\examples\common\src\app_error_weak.c \
+ D:\GIT\nrf5sdkformeshv500src\examples\common\src\app_error_weak.c \
  d:\git\nrf5_sdk_17.0.2_d674dde\modules\nrfx\mdk\nrf.h \
  d:\git\nrf5_sdk_17.0.2_d674dde\modules\nrfx\mdk\nrf52.h \
  d:\git\nrf5_sdk_17.0.2_d674dde\components\toolchain\cmsis\include\core_cm4.h \
@@ -37,13 +37,13 @@ build/beaconing_nrf52832_xxAA_s132_7.2.0_Debug/obj/app_error_weak.o: \
  d:\git\nrf5_sdk_17.0.2_d674dde\components\boards\boards.h \
  d:\git\nrf5_sdk_17.0.2_d674dde\modules\nrfx\hal\nrf_gpio.h \
  d:\git\nrf5_sdk_17.0.2_d674dde\modules\nrfx\nrfx.h \
- d:\git\nrf5_sdk_17.0.2_d674dde\integration\nrfx\nrfx_config.h \
+ D:/GIT/nRF5_SDK_17.0.2_d674dde/integration/nrfx/nrfx_config.h \
  include/sdk_config.h include/app_config.h \
  d:\git\nrf5_sdk_17.0.2_d674dde\modules\nrfx\drivers\nrfx_common.h \
  d:\git\nrf5_sdk_17.0.2_d674dde\modules\nrfx\mdk\nrf_peripherals.h \
  d:\git\nrf5_sdk_17.0.2_d674dde\modules\nrfx\mdk\nrf52832_peripherals.h \
- d:\git\nrf5_sdk_17.0.2_d674dde\integration\nrfx\nrfx_glue.h \
- d:\git\nrf5_sdk_17.0.2_d674dde\integration\nrfx\legacy\apply_old_config.h \
+ D:/GIT/nRF5_SDK_17.0.2_d674dde/integration/nrfx/nrfx_glue.h \
+ D:/GIT/nRF5_SDK_17.0.2_d674dde/integration/nrfx/legacy/apply_old_config.h \
  d:\git\nrf5_sdk_17.0.2_d674dde\modules\nrfx\soc\nrfx_irqs.h \
  d:\git\nrf5_sdk_17.0.2_d674dde\modules\nrfx\soc\nrfx_irqs_nrf52832.h \
  d:\git\nrf5_sdk_17.0.2_d674dde\components\libraries\util\nrf_assert.h \

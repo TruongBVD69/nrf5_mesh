@@ -1,5 +1,5 @@
 build/beaconing_nrf52832_xxAA_s132_7.2.0_Debug/obj/scanner.o: \
- D:\GIT\nrf5_mesh\mesh\bearer\src\scanner.c \
+ D:\GIT\nrf5sdkformeshv500src\mesh\bearer\src\scanner.c \
  ../../mesh/bearer/api/scanner.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.62/include/stdint.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.62/include/stdbool.h \

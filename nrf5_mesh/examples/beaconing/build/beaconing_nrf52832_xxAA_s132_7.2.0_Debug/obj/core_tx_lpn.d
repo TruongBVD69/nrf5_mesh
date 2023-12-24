@@ -1,5 +1,5 @@
 build/beaconing_nrf52832_xxAA_s132_7.2.0_Debug/obj/core_tx_lpn.o: \
- D:\GIT\nrf5_mesh\mesh\core\src\core_tx_lpn.c \
+ D:\GIT\nrf5sdkformeshv500src\mesh\core\src\core_tx_lpn.c \
  ../../mesh/core/include/core_tx_lpn.h \
  ../../mesh/bearer/include/radio_config.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.62/include/stdint.h \

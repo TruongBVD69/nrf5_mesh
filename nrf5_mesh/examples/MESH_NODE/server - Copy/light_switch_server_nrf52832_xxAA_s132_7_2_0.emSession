@@ -61,21 +61,12 @@
   <Watches active="0" update="Never"/>
  </Watch4>
  <Files>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="8513" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="include/sdk_config.h" selected="0" top="8549" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="94" y="411" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="src/main.c" selected="1" top="394" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="40" y="218" useTextEdit="1" openedFrom="D:/GIT/nrf5_mesh/mesh/core/api/nrf_mesh_assert.h" useBinaryEdit="0" left="0" path="../../../../nrf5_sdk_17.0.2_d674dde/components/libraries/util/app_util.h" selected="0" top="209" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="45" y="98" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../mesh/core/api/nrf_mesh_assert.h" selected="0" top="72" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="45" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../mesh/core/include/utils.h" selected="0" top="400" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="8" y="67" useTextEdit="1" openedFrom="D:/GIT/nrf5_mesh/models/model_spec/generic_level/src/generic_level_mc.c" useBinaryEdit="0" left="0" path="../../../models/model_spec/common/include/model_common.h" selected="0" top="51" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="45" y="64" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../models/model_spec/generic_level/include/generic_level_common.h" selected="0" top="79" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="42" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../models/model_spec/generic_level/include/generic_level_mc.h" selected="0" top="125" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="2" y="0" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../models/model_spec/generic_level/src/generic_level_mc.c" selected="0" top="129" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="438" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../common/src/app_level.c" selected="0" top="458" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="27" y="54" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 5.62/include/stdint.h" selected="0" top="25" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="49" y="49" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../../nrf5_sdk_17.0.2_d674dde/components/toolchain/cmsis/include/cmsis_gcc.h" selected="0" top="49" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="32" y="572" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="C:/Program Files/SEGGER/SEGGER Embedded Studio for ARM 5.62/include/string.h" selected="0" top="567" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="35" y="120" useTextEdit="1" openedFrom="D:/GIT/nrf5_mesh/examples/MESH_NODE/server - Copy/src/main.c" useBinaryEdit="0" left="0" path="../../common/include/app_level.h" selected="0" top="100" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../models/model_spec/generic_level/src/generic_level_server.c" selected="0" top="255" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="36" y="70" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="src/main.c" selected="1" top="54" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="43" y="178" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../../nrf5_sdk_17.0.2_d674dde/components/libraries/timer/app_timer.h" selected="0" top="192" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../models/model_spec/generic_level/include/generic_level_common.h" selected="0" top="87" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../models/model_spec/generic_level/include/generic_level_server.h" selected="0" top="207" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="29" y="261" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../common/include/app_level.h" selected="0" top="258" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="40" y="489" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../common/src/app_level.c" selected="0" top="480" codecName="Default"/>
  </Files>
- <ARMCrossStudioWindow activeProject="light_switch_server_nrf52832_xxAA_s132_7.2.0" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="D:/GIT/nrf5_mesh/models/model_spec/generic_level/src" debugSearchPath="" autoConnectCapabilities="3199"/>
+ <ARMCrossStudioWindow activeProject="light_switch_server_nrf52832_xxAA_s132_7.2.0" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="D:/GIT/nrf5_mesh/models/model_spec/generic_level/src" debugSearchPath="" autoConnectCapabilities="3711"/>
 </session>

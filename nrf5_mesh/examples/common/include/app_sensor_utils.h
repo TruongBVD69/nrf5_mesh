@@ -48,7 +48,7 @@ typedef struct __sensor_cadence_t sensor_cadence_t;
 
 typedef bool (*sensor_in_fast_region_t)(sensor_cadence_t *);
 typedef bool (*sensor_delta_trigger_fast_t)(sensor_cadence_t *);
-typedef uint16_t (*cadence_value_marshall_t)(sensor_cadence_t *, uint8_t *, uint16_t);
+typedef uint16_t (*cadence_value_marshall_t)(sensor_cadence_t *, uint16_t *, uint16_t);
 
 struct __sensor_cadence_t
 {
@@ -57,12 +57,12 @@ struct __sensor_cadence_t
     model_timer_t min_interval_timer;                /**< For enforcing status min interval */
     bool min_interval_publication_pending;           /**< Has a publication been scheduled waiting for min interval to expire */
     app_sensor_server_t * p_server;                  /**< Identifies the owning server */
-    uint8_t * p_trigger_delta_down;                  /**< Value triggers fast cadence */
-    uint8_t * p_trigger_delta_up;                    /**< Value triggers fast cadence */
-    uint8_t * p_fast_cadence_low;                    /**< Value for fast cadence range */
-    uint8_t * p_fast_cadence_high;                   /**< Value for fast cadence range */
-    uint8_t * p_previous_value;                      /**< The previous sensor value */
-    uint8_t * p_current_value;                       /**< The current sensor value */
+    uint16_t * p_trigger_delta_down;                  /**< Value triggers fast cadence */
+    uint16_t * p_trigger_delta_up;                    /**< Value triggers fast cadence */
+    uint16_t * p_fast_cadence_low;                    /**< Value for fast cadence range */
+    uint16_t * p_fast_cadence_high;                   /**< Value for fast cadence range */
+    uint16_t * p_previous_value;                      /**< The previous sensor value */
+    uint16_t * p_current_value;                       /**< The current sensor value */
     sensor_in_fast_region_t in_fast_region;          /**< Function returning whether the value is in the fast cadence region */
     sensor_delta_trigger_fast_t delta_trigger_fast;  /**< Function returning whether the delta should trigger fast cadence */
     cadence_value_marshall_t value_marshall;         /**< Function to marshall the data in the supplied buffer into correct format */
@@ -70,7 +70,7 @@ struct __sensor_cadence_t
     uint8_t fast_period_exponent;                    /**< Fast cadence exponent */
     uint8_t trigger_type;                            /**< Fast cadence trigger type */
     uint8_t min_interval_exponent;                   /**< Minimum cadence interval */
-    uint16_t range_value_bytes_allocated;            /**< buffer size for value arrays */
+    uint32_t range_value_bytes_allocated;            /**< buffer size for value arrays */
     uint16_t delta_value_bytes_allocated;            /**< buffer size for delta arrays */
     uint16_t marshalled_bytes;                       /**< The marshalled value size  */
 };
@@ -105,7 +105,7 @@ uint8_t * sensor_marshalled_entry_parse(uint8_t * p_data_buf,
  *
  * @returns  the percentage 8 value
  */
-uint8_t sensor_percentage8_create(uint8_t value, uint8_t b_exp);
+uint16_t sensor_percentage8_create(uint16_t value, uint16_t b_exp);
 
 /**
  * Convert a percentage 8 value to a 7 bit value + binary exponent
@@ -115,7 +115,7 @@ uint8_t sensor_percentage8_create(uint8_t value, uint8_t b_exp);
  *
  * @returns  the 7 bit value (caller needs to combine with the b_exp)
  */
-uint8_t sensor_percentage8_parse(uint8_t value, uint8_t * p_b_exp);
+uint16_t sensor_percentage8_parse(uint16_t value, uint16_t * p_b_exp);
 
 /**
  * Creates a cadence instance in the provided buffer.
@@ -181,7 +181,7 @@ void sensor_cadence_get(app_sensor_server_t * p_server,
  *              the number of bytes of serialized data in p_buffer on output.
  */
 void sensor_cadence_to_buffer_serialize(sensor_cadence_t * p_cadence,
-                                        uint8_t * p_buffer,
+                                        uint16_t * p_buffer,
                                         uint16_t * p_bytes);
 
 /**

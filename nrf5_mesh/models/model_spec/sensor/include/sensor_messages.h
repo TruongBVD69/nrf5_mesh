@@ -76,23 +76,23 @@
 typedef enum
 {
     SENSOR_OPCODE_DESCRIPTOR_GET = 0x8230,
-    SENSOR_OPCODE_DESCRIPTOR_STATUS = 0x51,
+    SENSOR_OPCODE_DESCRIPTOR_STATUS = 0x0051,
     SENSOR_OPCODE_GET = 0x8231,
-    SENSOR_OPCODE_STATUS = 0x52,
+    SENSOR_OPCODE_STATUS = 0x0052,
     SENSOR_OPCODE_COLUMN_GET = 0x8232,
-    SENSOR_OPCODE_COLUMN_STATUS = 0x53,
+    SENSOR_OPCODE_COLUMN_STATUS = 0x0053,
     SENSOR_OPCODE_SERIES_GET = 0X8233,
-    SENSOR_OPCODE_SERIES_STATUS = 0x54,
+    SENSOR_OPCODE_SERIES_STATUS = 0x0054,
     SENSOR_OPCODE_CADENCE_GET = 0x8234,
-    SENSOR_OPCODE_CADENCE_SET = 0x55,
-    SENSOR_OPCODE_CADENCE_SET_UNACKNOWLEDGED = 0x56,
-    SENSOR_OPCODE_CADENCE_STATUS = 0x57,
+    SENSOR_OPCODE_CADENCE_SET = 0x0055,
+    SENSOR_OPCODE_CADENCE_SET_UNACKNOWLEDGED = 0x0056,
+    SENSOR_OPCODE_CADENCE_STATUS = 0x0057,
     SENSOR_OPCODE_SETTINGS_GET = 0x8235,
-    SENSOR_OPCODE_SETTINGS_STATUS = 0x58,
+    SENSOR_OPCODE_SETTINGS_STATUS = 0x0058,
     SENSOR_OPCODE_SETTING_GET = 0x8236,
-    SENSOR_OPCODE_SETTING_SET = 0x59,
-    SENSOR_OPCODE_SETTING_SET_UNACKNOWLEDGED = 0x5A,
-    SENSOR_OPCODE_SETTING_STATUS = 0x5B,
+    SENSOR_OPCODE_SETTING_SET = 0x0059,
+    SENSOR_OPCODE_SETTING_SET_UNACKNOWLEDGED = 0x005A,
+    SENSOR_OPCODE_SETTING_STATUS = 0x005B,
 } sensor_opcode_t;
 
 /** Packed message structure typedefs are used for packing and unpacking byte stream. */
@@ -303,8 +303,8 @@ typedef struct __attribute((packed))
 {
     uint16_t property_id;            /**< Property ID for the sensor */
     uint16_t setting_property_id;    /**< Setting Property ID identifying a setting within a sensor */
-    uint8_t  setting_access;
-    uint8_t  setting_raw[];
+    uint16_t  setting_access;
+    uint16_t  setting_raw[];
 } sensor_setting_status_msg_pkt_t;
 
 /** Message format for the Sensor Get message
@@ -338,7 +338,7 @@ typedef struct __attribute((packed))
     See Table 4.30: "Marshalled Sensor Data field" for a description of the Marshalled Sensor Data
     field.
  */
-typedef uint8_t sensor_status_msg_pkt_t;
+typedef uint16_t sensor_status_msg_pkt_t;
 
 /** Message format for the Sensor Column Get message (partial)
     4.2.15 Sensor Column Get
@@ -377,7 +377,7 @@ typedef struct __attribute((packed))
 typedef struct __attribute((packed))
 {
     uint16_t property_id;            /**< Property ID for the sensor */
-    uint8_t  raw_value_xwy[];        /**< Sequence of raw value x, column width and raw value y.
+    uint16_t  raw_value_xwy[];        /**< Sequence of raw value x, column width and raw value y.
                                           These must be correctly formatted (or parsed) by the application. */
 } sensor_column_status_msg_pkt_t;
 
@@ -432,7 +432,7 @@ typedef struct __attribute((packed))
 typedef struct __attribute((packed))
 {
     uint16_t property_id;            /**< Property ID for the sensor */
-    uint8_t  raw_value_xwy[];        /**< Sequence of raw value x[n], column width[n] and raw
+    uint16_t  raw_value_xwy[];        /**< Sequence of raw value x[n], column width[n] and raw
                                           value y[n], followed by raw value x[n+1] and so on.
                                           These must be correctly formatted (or parsed) by the
                                           application. */

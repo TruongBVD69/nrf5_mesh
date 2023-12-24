@@ -1,5 +1,6 @@
 build/beaconing_nrf52832_xxAA_s132_7.2.0_Debug/obj/fsm.o: \
- D:\GIT\nrf5_mesh\mesh\core\src\fsm.c ../../mesh/core/include/fsm.h \
+ D:\GIT\nrf5sdkformeshv500src\mesh\core\src\fsm.c \
+ ../../mesh/core/include/fsm.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.62/include/stdint.h \
  C:/Program\ Files/SEGGER/SEGGER\ Embedded\ Studio\ for\ ARM\ 5.62/include/stdbool.h \
  ../../mesh/core/api/nrf_mesh_config_core.h \

@@ -177,7 +177,7 @@ static inline uint64_t publish_period_get(access_model_handle_t model_handle)
  */
 static inline void sensor_mpid_a_create(uint16_t property_id,
                                        uint8_t data_bytes,
-                                       uint8_t * p_buffer)
+                                       uint16_t * p_buffer)
 {
     sensor_mpid_a_t * p_mpid = (sensor_mpid_a_t *)p_buffer;
 
@@ -197,7 +197,7 @@ static inline void sensor_mpid_a_create(uint16_t property_id,
  */
 static inline void sensor_mpid_b_create(uint16_t property_id,
                                        uint8_t data_bytes,
-                                       uint8_t * p_buffer)
+                                       uint16_t * p_buffer)
 {
     sensor_mpid_b_t * p_mpid = (sensor_mpid_b_t *)p_buffer;
 

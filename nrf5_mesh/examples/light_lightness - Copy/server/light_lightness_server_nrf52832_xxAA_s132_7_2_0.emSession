@@ -2,7 +2,7 @@
 <session>
  <Bookmarks/>
  <Breakpoints groups="Breakpoints" active_group="Breakpoints">
-  <Exceptions set="MemManage;UsageFault_Coprocessor;UsageFault_CheckingError;UsageFault_StateError;BusFault;ExceptionEntryReturnFault;HardFault"/>
+  <Exceptions set="BusFault;ExceptionEntryReturnFault;HardFault;MemManage;UsageFault_CheckingError;UsageFault_Coprocessor;UsageFault_StateError"/>
  </Breakpoints>
  <ExecutionProfileWindow/>
  <FrameBufferWindow>
@@ -59,11 +59,16 @@
  </Watch4>
  <Files>
   <SessionOpenFile windowGroup="DockEditLeft" x="0" y="0" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../doc/getting_started/SES.md" selected="0" top="0" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="8" y="86" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="src/main.c" selected="1" top="74" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="8" y="66" useTextEdit="1" openedFrom="D:/GIT/nrf5_mesh/examples/light_lightness - Copy/server/src/main.c" useBinaryEdit="0" left="0" path="../../../../nRF5_SDK_17.0.2_d674dde/components/boards/pca10040.h" selected="0" top="44" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="48" y="504" useTextEdit="1" openedFrom="D:/GIT/nrf5_mesh/examples/light_lightness - Copy/server/src/main.c" useBinaryEdit="0" left="0" path="../../../mesh/core/api/nrf_mesh_events.h" selected="0" top="490" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="41" y="893" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../common/src/app_light_lightness.c" selected="0" top="887" codecName="Default"/>
-  <SessionOpenFile windowGroup="DockEditLeft" x="39" y="283" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../common/include/app_light_lightness.h" selected="0" top="279" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="73" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="src/main.c" selected="1" top="55" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="41" y="893" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../common/src/app_light_lightness.c" selected="0" top="890" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="7" y="228" useTextEdit="1" openedFrom="D:/GIT/nrf5_mesh/examples/light_lightness - Copy/server/src/main.c" useBinaryEdit="0" left="0" path="../../common/include/app_light_lightness.h" selected="0" top="84" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="39" y="236" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../models/model_spec/generic_level/include/generic_level_server.h" selected="0" top="195" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="46" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../models/model_spec/light_lightness/include/light_lightness_setup_server.h" selected="0" top="17" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="278" useTextEdit="1" openedFrom="D:/GIT/nrf5_mesh/examples/light_lightness - Copy/server/src/main.c" useBinaryEdit="0" left="0" path="../../../models/model_spec/generic_level/src/generic_level_server.c" selected="0" top="245" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="2" y="190" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="../../../../nrf5_sdk_17.0.2_d674dde/components/libraries/timer/app_timer.h" selected="0" top="194" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="2" y="543" useTextEdit="1" openedFrom="D:/GIT/nrf5_mesh/examples/light_lightness - Copy/server/src/main.c" useBinaryEdit="0" left="0" path="../../../mesh/core/api/nrf_mesh_events.h" selected="0" top="529" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="0" y="312" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="src/ds18b20.c" selected="0" top="18" codecName="Default"/>
+  <SessionOpenFile windowGroup="DockEditLeft" x="31" y="43" useTextEdit="1" openedFrom="" useBinaryEdit="0" left="0" path="include/ds18b20.h" selected="0" top="28" codecName="Default"/>
  </Files>
  <ARMCrossStudioWindow activeProject="light_lightness_server_nrf52832_xxAA_s132_7.2.0" fileDialogDefaultFilter="*.c" autoConnectTarget="J-Link" buildConfiguration="Debug" sessionSettings="" debugSearchFileMap="" fileDialogInitialDirectory="" debugSearchPath="" autoConnectCapabilities="3199"/>
 </session>
