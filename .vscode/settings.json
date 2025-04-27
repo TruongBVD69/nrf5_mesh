@@ -1,0 +1,15 @@
+{
+    "files.associations": {
+        "model_config_file.h": "c",
+        "stdint.h": "c",
+        "app_light_ctl.h": "c",
+        "model_common.h": "c",
+        "light_ctl_setup_server.h": "c",
+        "light_lightness_utils.h": "c",
+        "light_ctl_utils.h": "c",
+        "light_ctl_mc.h": "c",
+        "app_light_lightness.h": "c",
+        "nrf_mesh_serial.h": "c",
+        "nrf_mesh.h": "c"
+    }
+}
